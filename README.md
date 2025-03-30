@@ -1,3 +1,5 @@
+# Kafka Spring Boot Blueprint
+
 ![Java](https://img.shields.io/badge/Java-17-blue)
 ![Maven](https://img.shields.io/badge/Maven-3-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.3-blue)
@@ -5,7 +7,6 @@
 ![Mockito](https://img.shields.io/badge/Mockito-blue)
 ![Kafka](https://img.shields.io/badge/Kafka-3.x-red)
 
-# Kafka Spring Boot Blueprint
 
 This project demonstrates three different Kafka delivery modes using Spring Boot:
 - At-most-once delivery
