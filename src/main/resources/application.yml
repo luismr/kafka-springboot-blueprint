@@ -1,0 +1,40 @@
+spring:
+  kafka:
+    # Kafka broker connection settings
+    bootstrap-servers: localhost:9092
+    
+    # Producer configurations
+    producer:
+      # Key and value serializers for all producers
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      
+      # At-most-once delivery configuration
+      at-most-once:
+        acks: 0  # No acknowledgment required
+        retries: 0  # No retries on failure
+      
+      # At-least-once delivery configuration
+      at-least-once:
+        acks: all  # Wait for all replicas to acknowledge
+        retries: 3  # Retry up to 3 times on failure
+      
+      # Exactly-once delivery configuration
+      exactly-once:
+        acks: all  # Wait for all replicas to acknowledge
+        enable-idempotence: true  # Enable idempotent producer
+        transaction-id-prefix: exactly-once-  # Prefix for transaction IDs
+
+    # Consumer configurations (if needed)
+    consumer:
+      group-id: kafka-delivery-modes-group
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+# Logging configuration
+logging:
+  level:
+    org.springframework.kafka: INFO
+    com.example.kafka: DEBUG 
