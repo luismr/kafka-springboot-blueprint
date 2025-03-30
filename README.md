@@ -210,11 +210,10 @@ This setup:
 
 ### Cluster Setup
 
-A Docker Compose setup for running a Kafka cluster locally is available at [kafka-cluster-docker-compose](https://github.com/luismr/kafka-cluster-docker-copose). This setup includes:
+A Docker Compose setup for running a Kafka cluster locally is available at [kafka-cluster-docker-compose](https://github.com/luismr/kafka-cluster-docker-compose). This setup includes:
 - Multiple Kafka brokers using KRaft (Kafka Raft metadata mode)
-- Kafdrop (Web UI for Kafka)
 - Network configuration for local development
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details. 
